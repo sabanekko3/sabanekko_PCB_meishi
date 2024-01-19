@@ -22,7 +22,7 @@
 ## 基板概要  
 
 この名刺は簡単に言えば †僕が考えた最強のユニバーサル基板† となっております。  
-主な特徴として、
+特徴としては、
 
 - USB type-Cポート  
 - シリアル変換IC搭載
@@ -31,7 +31,7 @@
 - GND用ベタプレーン
 - ターミナルブロックがそのまま挿せる穴径
   
-があります。便利ですねー。  
+といった感じです。便利ですねー。  
 
 ![picture 6](images/fc8ba5c9c913b5eacd093493629d11b9c0027ca01300b2e21fa6b90d0fba1a1b.png)  
 
@@ -80,7 +80,7 @@
 |D1|LED 1608|CH340E TNOW||
 |D2|LED 1608|CH224K PG||
 |D3|ショットキー SOD-123|スイッチングレギュレータ出力|https://akizukidenshi.com/catalog/g/gI-02074/|
-|F1|ポリヒューズ 2012|脳死で選んでた|https://akizukidenshi.com/catalog/g/gP-13955/　←耐圧低いのでヤバいです|
+|F1|ポリヒューズ 2012|脳死で選んでた|　耐圧低いのでヤバいです→ https://akizukidenshi.com/catalog/g/gP-13955/|
 |J1|USB type-C||https://akizukidenshi.com/catalog/g/gC-14356/|
 |L1|47uH||https://akizukidenshi.com/catalog/g/gP-08322/|
 |R1,R2|4.7kぐらい 1608|LEDの抵抗なので適当||
@@ -93,9 +93,11 @@
 |U3|NJW1933|スイッチングレギュレータ|https://akizukidenshi.com/catalog/g/gI-15944/|
 
 なおR8,R9は電圧フィードバック用の分圧抵抗なので  
+
 $$
 1.245[V]\cong\frac{R9}{R8+R9}\times 3.3[V]
 $$
+
 になるような抵抗になっていれば何でもいいです。  
 私は手持ちの抵抗が無かったのでR9=1k,R8=4.7k 3並列とかいう違法建築を敢行しました。  
 
@@ -117,6 +119,12 @@ $$
 
 問題なく電圧が出力されていればD1(PG)が光ります。  
 A to Cケーブルを使用している場合D1は光りません。  
+
+設定の例  
+
+![picture 9](images/8a4d107395b7c328a32a4eed4becbe19012544741b4ce9bd880691f375e43773.png)  
+
+![picture 8](images/bd092e8aa4ce7d26fc4558148c21b6384a6e79f7e11f4349b5e1cf141465394c.png)  
 
 ### USB-Serial変換  
 
